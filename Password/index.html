@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Passwords</title>
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+    <link href="../styles/password.css" rel="stylesheet" type="text/css" />
+</head>
+<header>
+    <h1>Password Generator</h1>
+</header>
+<nav id="mobile_menu"></nav>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Password/index.html">Password Generator</a></li>
+        <li><a href="../Record/index.html">Purchase Record</a></li>
+    </ul>
+</nav>
+<br>
+<body>
+    <main> 
+        <form>
+            <div>
+                <label for="inputLength">Password Length: </label>
+                <input type="number" min="0" max="256" value="8" id="inputLength" name="inputLength" required>
+                <br>
+                <br>
+                <input type="submit" value="Get Password" id="buttonSubmit">
+                <br>
+                <input type="reset" value="Clear" id="buttonClear">
+                <br>
+                <br>
+                <label for="textBoxPassword">Generated Password: </label>
+                <input type="text" id="textBoxPassword" readonly>
+            </div>
+        </form>
+    </main>
+    <script src="Password.js"></script>
+</body>
+</html>

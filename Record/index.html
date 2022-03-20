@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Records</title>
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+    <link href="../styles/record.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<header>
+    <h1>Purchase Records</h1>
+</header>
+<nav id="mobile_menu"></nav>
+<nav id="nav_menu">
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Password/index.html">Password Generator</a></li>
+        <li><a href="../Record/index.html">Purchase Record</a></li>
+    </ul>
+</nav>
+<br>
+<body>
+    <main> 
+        <form>
+            <table>
+                <tr>
+                    <td class="label">
+                        <label for="inputEmail">Email: </label>
+                    </td>
+                    <td class="input">
+                        <input type="text" id="inputEmail" name="inputEmail" required>
+                        <span class="req"></span>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="purchaseDate">Date of Purchase: </label>
+                    </td>
+                    <td class="input">
+                        <input type="text" id="purchaseDate" name="purchaseDate" required>
+                        <span class="req"></span>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="discountType">Type Of Discount: </label>
+                    </td>
+                    <td class="input">
+                        <select id="discountType">
+                            <option value="0">None</option>
+                            <option value="1">Military</option>
+                            <option value="2">Student</option>
+                            <option value="3">AARP</option>
+                        </select>
+                        <span class="req"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="purchaseAmount">Purchase Amount: </label>
+                    </td>
+                    <td class="input">
+                        <input type="text" id="purchaseAmount" name="purchaseAmount" placeholder="22.22" required>
+                        <span class="req"></span>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="input">
+                        <input type="submit" value="Process Information" id="buttonSubmit">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <label for="discountedPrice">Discounted Price: </label>
+                    </td>
+                    <td class="input">
+                        <input type="text" id="discountedPrice" readonly>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <script src="Record.js"></script>
+</body>
+</html>
